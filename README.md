@@ -1,4 +1,18 @@
+# Jalaliday-forked
+
+This is a fork of the [Jalaliday](https://github.com/alibaba-aero/jalaliday)
+plugin for the awesome [Day.js](https://github.com/iamkun/dayjs).
+
+This package should be considered a temporary solution until some fixes are
+applied to the original project. I just need this package in the meanwhile :D
+
+Please note that this package will be deprecated whenever the main package fixes
+the issues that are fixed here. So keep an eye out.
+
+The rest of this page is the original README in the time of fork.
+
 # Jalaliday
+
 [![npm (scoped with tag)](https://img.shields.io/npm/v/jalaliday/latest.svg?style=flat-square)](https://npmjs.com/package/jalaliday)
 [![npm](https://img.shields.io/npm/dt/jalaliday.svg?style=flat-square)](https://npmjs.com/package/jalaliday)
 [![CircleCI](https://img.shields.io/circleci/project/github/alibaba-aero/jalaliday.svg?style=flat-square)](https://circleci.com/gh/)
@@ -6,24 +20,29 @@
 [![Dependencies](https://david-dm.org/jalaliday/status.svg?style=flat-square)](https://david-dm.org/)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
-Persian (Jalali, Khorshidi) Plugin for [Day.js](https://github.com/iamkun/dayjs), Jalaliday add multi-calendar functionality to Day.js core regardless for of locale, so we can have Gregorian calendar is Persian locale of Jalali calendar in English locale  
+Persian (Jalali, Khorshidi) Plugin for [Day.js](https://github.com/iamkun/dayjs), Jalaliday add multi-calendar functionality to Day.js core regardless for of locale, so we can have Gregorian calendar is Persian locale of Jalali calendar in English locale
 Unlike moment and becuase of immutablity of dayjs, there is no need for formats like `jYYYY` or `jMM`, in Jalaliday all formats are same and standard
 
-> 
+>
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
 ## Installation
+
 NPM
+
 ```
 npm install --save jalaliday
 ```
+
 YARN
+
 ```
 yarn add jalaliday
 ```
 
 ## Usage
+
 ```javascript
 import dayjs from 'dayjs'
 import jalaliday from 'jalaliday'
@@ -32,27 +51,40 @@ dayjs.extend(jalaliday)
 ```
 
 ### Changing calendar
+
 if you want to all new instanses of dayjs use `jalali` calendar, you can set default calendar
+
 ```javascript
 dayjs.calendar('jalali') // Jalali Calendar
 // OR
 dayjs.calendar('gregory') // Gregorian Calendar
 ```
+
 also you can create a jalali date without changing default calendar
+
 ```javascript
 const date = dayjs()
 const jalaliDate = date.calendar('jalali')
 ```
 
 with combination of `calendar` and `locale` we have multi language for real
+
 ```javascript
-dayjs().calendar('jalali').locale('en').format('DD MMMM YYYY') // '13 Shahrivar 1397'
-dayjs().calendar('gregory').locale('fa').format('DD MMMM YYYY') // '04 سپتامبر 2018'
+dayjs()
+  .calendar('jalali')
+  .locale('en')
+  .format('DD MMMM YYYY') // '13 Shahrivar 1397'
+dayjs()
+  .calendar('gregory')
+  .locale('fa')
+  .format('DD MMMM YYYY') // '04 سپتامبر 2018'
 ```
 
 ### API
+
 All Api operations of Jalaliday is same as Dayjs itself but calendar based, for more information checkout [Dayjs API](https://github.com/iamkun/dayjs/blob/master/docs/en/API-reference.md)
 For a glance:
+
 - [API Reference](https://github.com/iamkun/dayjs/blob/master/docs/en/API-reference.md#api-reference)
   - [Parsing](https://github.com/iamkun/dayjs/blob/master/docs/en/API-reference.md#parsing)
     - [Constructor `dayjs(existing?: string | number | Date | Dayjs)`](https://github.com/iamkun/dayjs/blob/master/docs/en/API-reference.md#constructor-dayjsexisting-string--number--date--dayjs)
