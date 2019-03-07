@@ -17,5 +17,10 @@ test('keep instance calendar on manipulation', () => {
   expect(date.add(1, 'month').isJalali()).toEqual(true)
   expect(dayjs(date).startOf('month').$C).toEqual('jalali')
   expect(dayjs(date).add(1, 'month').$C).toEqual('jalali')
-  expect(dayjs(date).add(1, 'month').add(1, 'month').isJalali()).toEqual(true)
+  expect(
+    dayjs(date)
+      .add(1, 'month')
+      .add(1, 'month')
+      .isJalali()
+  ).toEqual(true)
 })

@@ -1,4 +1,3 @@
-
 import MockDate from 'mockdate'
 import dayjs from 'dayjs'
 import jalali from '../src'
@@ -171,7 +170,11 @@ it('dayInMonth - months with 29 days', () => {
 })
 
 it('format', () => {
-  expect(dayjs('2018/09/03').calendar('gregory').format('YYYY/MM/DD')).toEqual('2018/09/03')
+  expect(
+    dayjs('2018/09/03')
+      .calendar('gregory')
+      .format('YYYY/MM/DD')
+  ).toEqual('2018/09/03')
 
   const date = dayjs('1397/06/13', { jalali: true })
   expect(date.format()).toEqual('1397-06-13T00:00:00+04:30')

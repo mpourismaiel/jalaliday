@@ -1,7 +1,8 @@
 {
   "extends": "airbnb-base",
   "plugins": [
-    "jest"
+    "jest",
+    "prettier"
   ],
   "env": {
     "jest/globals": true
@@ -39,6 +40,11 @@
     "import/extensions": [
       2,
       "ignorePackages"
-    ]
+    ],
+    "prettier/prettier": "error",
+    "space-before-function-paren": "off",
+    "function-paren-newline": "off",
+    "indent": "off",
+    "arrow-parens": ["error", "as-needed"]
   }
 }
