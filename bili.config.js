@@ -5,8 +5,8 @@ module.exports = {
     'es'
   ],
   sizeLimit: {
-    'cjs-min': '2.99KB',
-    'umd-min': '2.99KB',
-    es: '4.99KB'
+    'cjs-min': '7.99KB',
+    'umd-min': '15.99KB',
+    es: '7.99KB'
   }
 }
